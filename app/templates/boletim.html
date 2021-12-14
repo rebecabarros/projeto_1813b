@@ -1,0 +1,17 @@
+{# template baseado no template base #}
+{% extends 'base_bts.html' %}
+
+{% block title %}Boletim do Aluno{% endblock %}
+
+{% block content %}
+    <h1> Estamos na página do boletim </h1>
+    <table border = 1>
+        {% for chave, valor in boletim.items() %}
+           <tr>
+              <th> {{ chave|title }} </th>
+              <td> {{ valor }} </td>
+           </tr>
+        {% endfor %}
+     </table>
+
+{% endblock %}

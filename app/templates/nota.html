@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Checagem da Nota{% endblock %}
+
+{% block content %}
+{% if nota > 5 %}
+    <p>Você foi aprovado</p>
+{% else %}
+    <p>Você foi reprovado</p>
+{% endif %}
+{% endblock %}

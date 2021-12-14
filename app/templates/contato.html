@@ -1,0 +1,17 @@
+{# template baseado no template base #}
+{% extends 'base_bts.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    Login 
+{% endblock %}
+
+{% block content %}
+    {% for message in get_flashed_messages() %} 
+        {{message}}
+    {% endfor %}
+    <h1>Contato</h1>
+    <hr>
+    {{ wtf.quick_form(form) }}
+       
+{% endblock %}

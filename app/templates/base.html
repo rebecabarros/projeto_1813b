@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Titulo Padrão{% endblock %}</title>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    </head>
+    <body>       
+        {% block nav %}
+        <ul>
+            <li><a href="{{ url_for('index')}}">Home</a></li>
+            <li><a href="{{ url_for('boletim')}}">Boletim</a></li>
+        </ul>
+        {% endblock %}
+
+        {% block content %}
+
+        {% endblock %}
+
+    </body>
+</html>
